@@ -19,6 +19,8 @@
     in {
       packages.x86_64-linux.tango = tango;
 
+      defaultPackage.x86_64-linux = self.packages.x86_64-linux.tango;
+
       devShell.x86_64-linux = pkgs.mkShell { buildInputs = [ self.packages.x86_64-linux.tango ]; };
     };
 }
